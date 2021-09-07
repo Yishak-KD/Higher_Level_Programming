@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-for i in range(ord('a'), ord('z') + 1):
-    if i == ord('e') or i == ord('q'):
-        continue
-    else:
-        print(chr(i), end="")
+for sletter in range(97, 123):
+    if chr(sletter) is not 'q' and chr(sletter) is not 'e':
+        print("{}".format(chr(sletter)), end="")
