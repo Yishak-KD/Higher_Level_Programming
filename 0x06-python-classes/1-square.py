@@ -1,14 +1,16 @@
 #!/usr/bin/python3
-
-"""Define a class square"""
-
+"""defines the python3 interpreter is located in /usr/bin/python3."""
 
 class Square:
-    """Represent a square."""
+    """Create a class"""
 
-    def __init__(self, size):
-        """Initialize a new Square.
-        Args:
-            size (int): The size of the new square.
+    def __init__(self, size=None):
         """
-        self.__size = size 
+        Summary:
+        Create a private instance attribute.
+        
+        Parameter:
+        instantiate a size.
+        """
+
+        self.__size = size
