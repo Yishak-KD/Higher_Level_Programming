@@ -10,10 +10,12 @@ class Rectangle:
             """
         self.width = width
         self.height = height
+
     @property
     def width(self):
         """Retrieves the property of the width"""
         return self.__width
+
     @width.setter
     def width(self, value):
         """Sets the property of the width"""
@@ -22,10 +24,12 @@ class Rectangle:
         elif self.__width < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
+
     @property
     def height(self):
         """Retrieves the property of the height"""
         return self.__height
+
     @height.setter
     def height(self, value):
         """Sets the property of the setter"""
@@ -34,12 +38,13 @@ class Rectangle:
         elif self.__height < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
     def area(self):
         """A function that returns the area of the rectangle"""
         return self.width * self.height
+
     def perimeter(self):
         """A function that returns the perimeter of the rectangle"""
         if self.width == 0 or self.height == 0:
             return 0
-        else:
-            return [2 * (self.__width + self.__height)]
+        return [2 * (self.__width + self.__height)]
