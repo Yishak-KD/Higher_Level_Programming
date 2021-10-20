@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""Define a class Rectangle"""
-
+"""Location for the python interpreter"""
 
 class Rectangle:
-    """Defining a Rectangle"""
+    """An empythy class for a rectangle"""
     pass
