@@ -1,60 +1,47 @@
-#!/usr/bin/python3
-"""module that computes Area and perimeter"""
-
+#!/usr/bin/pyhton3
+"""Location of the python interpreter"""
 
 class Rectangle:
-    """Represent a rectangle"""
     def __init__(self, width=0, height=0):
-        """Intialize a rectangle
+        """Instantiating
         Args:
-             width(int): the width of the new rectangle.
-             height(int): the height of the new rectangle.
-        """
-
-        self.width = width
-        self.height = height
-
+            width: the width of rectangle
+            height: the height of rectangle
+            """
+        self.__width = width
+        self.__height = height
     @property
     def width(self):
-        """Getters - get value of width"""
+        """Retrieves the property of the width"""
         return self.__width
-
     @width.setter
     def width(self, value):
-        """setter- sets the value of width
-        Args:
-           value(int): the value to set the width
-        """
-        if type(value) != int:
+        """Sets the property of the width"""
+        if type(self.__width) is not int:
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise TypeError("width must be >= 0")
+        elif self.__width < 0:
+            raise ValueError("width must be >= 0")
         self.__width = value
-
     @property
     def height(self):
-        """getter- gets value of height"""
+        """Retrieves the property of the height"""
         return self.__height
-
     @height.setter
     def height(self, value):
-        """setter: sets the value of height
-        Args:
-            value(int): the value to set to width
-        """
-        if type(value) != int:
+        """Sets the property of the setter"""
+        if type(self.__height) is not int:
             raise TypeError("height must be an integer")
-        if value < 0:
-            raise TypeError("height must be >= 0")
+        elif self.__height < 0:
+            raise ValueError("height must be >= 0")
         self.__height = value
-
     def area(self):
-        """Returns Area"""
-
-        return (self.height * self.width)
-
+        """A function that returns the area of the rectangle"""
+        return self.__width * self.__height
     def perimeter(self):
-        """Returns perimeter"""
-        if self.width == 0 or self.height == 0:
+        """A function that returns the perimeter of the rectangle"""
+        if self.__width == 0:
             return 0
-        return ((self.width + self.height) * 2)
+        elif self.__height == 0:
+            return 0
+        else:
+            return [2 * (self.__width + self.__height)]
