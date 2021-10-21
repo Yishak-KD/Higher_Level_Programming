@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Location for the python interpreter"""
+"""Location of the python interpreter"""
 
 class Rectangle:
     """A class of rectangle"""
@@ -7,9 +7,10 @@ class Rectangle:
     def __init__(self, width=0, height=0):
         """Initializing the class attributes
             Args:
-                width: value of the width
-                height: value of the height
+                width: value of the width.
+                height: value of the height.
         """
+
         self.width = width
         self.height = height
 
@@ -29,14 +30,24 @@ class Rectangle:
 
     @property
     def height(self):
-        """Return a value from the height"""
+        """Return a value from the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set a value for the height"""
+        """Set a value for the height."""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """Function that returns the area of the rectangle."""
+        return self.width * self.height
+
+    def perimeter(self):
+        """Function that returns the perimeter of the rectangle."""
+        if self.width == 0 or self.height == 0:
+            return 0
+        return [2 *(self.width + self.height)]
