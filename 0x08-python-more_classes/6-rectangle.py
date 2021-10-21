@@ -1,93 +1,76 @@
 #!/usr/bin/python3
-"""module that computes Area and perimeter"""
-
+"""Location for the python interpreter"""
 
 class Rectangle:
-    """Represent a rectangle
-      Attributes:
-         number_of_instances(int) = counts how many instance of rectangles
-    """
+    """A class of rectangle"""
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
-        """Intialize a rectangle
-        Args:
-             width(int): the width of the new rectangle.
-             height(int): the height of the new rectangle.
+        """Initializing the class attributes
+            Args:
+                width: value of the width.
+                height: value of the height.
         """
-
         self.width = width
         self.height = height
-
-        Rectangle.number_of_instances += 1
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
-        """Getters - get value of width"""
+        """Return a value from the width."""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter- sets the value of width
-        Args:
-           value(int): the value to set the width
-        """
+        """Set the value using the setter property."""
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
-            raise TypeError("width must be >= 0")
+            raise ValueError("width must be >= 0")
         self.__width = value
 
     @property
     def height(self):
-        """getter- gets value of height"""
+        """Return a value from the height."""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter: sets the value of height
-        Args:
-            value(int): the value to set to width
-        """
+        """Set a value for the height."""
         if type(value) != int:
             raise TypeError("height must be an integer")
         if value < 0:
-            raise TypeError("height must be >= 0")
+            raise ValueError("height must be >= 0")
         self.__height = value
 
     def area(self):
-        """Returns Area"""
-
-        return (self.height * self.width)
+        """Function that returns the area of the rectangle."""
+        return self.__width * self.__height
 
     def perimeter(self):
-        """Returns perimeter"""
-        if self.width == 0 or self.height == 0:
+        """Function that returns the perimeter of the rectangle."""
+        if self.__width == 0 or self.__height == 0:
             return 0
-        return ((self.width + self.height) * 2)
+        return [2 * (self.__width + self.__height)]
 
     def __str__(self):
-        """Return the printable reprresentation of a rectangle.
-        represents the rectangle with # """
-
-        new_str = ""
-        if self.width == 0 or self.height == 0:
-            return new_str
-
+        """Prints out using __str__"""
+        str_new = ""
+        if self.__width == 0 or self.__height == 0:
+            return str_new
         else:
-            for num in range(self.height):
-                for rw in range(self.width):
-                    new_str += "#"
-                if num != self.height - 1:
-                    new_str += "\n"
-            return new_str
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    str_new += "#"
+                if i < self.__height:
+                    str_new += "\n"
+            return str_new
 
     def __repr__(self):
-        """Return the string representation of Rectangle
-        """
-        return "Rectangle({}, {})".format(self.width, self.height)
+        """Special method used to represent a class's objects as a string."""
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
-        """delates Rectangle"""
-        Rectangle.number_of_instances -= 1
+        """Reserved function to delete object."""
         print("Bye rectangle...")
+        type(self).number_of_instances -= 1
