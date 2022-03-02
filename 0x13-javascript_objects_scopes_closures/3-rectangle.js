@@ -9,8 +9,8 @@ module.exports = class Rectangle {
   }
   print() {
     let string = "";
-    for (let i = 0; i < self.height; i++) {
-      for (let j = 0; j < self.width; j++) {
+    for (let i = 0; i < this.height; i++) {
+      for (let j = 0; j < this.width; j++) {
         string += "X";
       }
       string += "\n";
