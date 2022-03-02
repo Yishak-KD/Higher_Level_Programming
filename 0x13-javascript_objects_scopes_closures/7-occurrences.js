@@ -1,4 +1,5 @@
 #!/usr/bin/node
+// Return the number of occurrences
 exports.nbOccurences;
 
 function nbOccurences(list, searchElement) {
