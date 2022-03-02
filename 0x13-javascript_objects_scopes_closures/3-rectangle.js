@@ -7,14 +7,10 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+  
   print() {
-    let string = "";
     for (let i = 0; i < h; i++) {
-      for (let j = 0; j < w; j++) {
-        string += "X";
-      }
-      string += "\n";
+        console.log("X".repeat(w));
     }
-    console.log(string);
   }
 };
