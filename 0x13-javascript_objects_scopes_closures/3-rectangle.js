@@ -2,15 +2,19 @@
 
 module.exports = class Rectangle {
   constructor(w, h) {
-    if (w > 0 && h > 0) {
+    if (this.width > 0 && this.height > 0) {
       this.width = w;
       this.height = h;
     }
   }
-  
   print() {
-    for (let i = 0; i < h; i++) {
-        console.log("X".repeat(w));
+    let string = "";
+    for (let i = 0; i < self.height; i++) {
+      for (let j = 0; j < self.width; j++) {
+        string += "X";
+      }
+      string += "\n";
     }
+    console.log(string);
   }
 };
