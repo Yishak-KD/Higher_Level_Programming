@@ -1,4 +1,7 @@
 #!/usr/bin/node
+/*
+ * Build a class of rectangle and an instance method inside
+ */
 
 module.exports = class Rectangle {
   constructor(w, h) {
@@ -7,14 +10,10 @@ module.exports = class Rectangle {
       this.height = h;
     }
   }
+
   print() {
-    let string = "";
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        string += "X";
-      }
-      string += "\n";
+      console.log("X".repeat(this.width));
     }
-    console.log(string);
   }
 };
