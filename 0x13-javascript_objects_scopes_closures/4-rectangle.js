@@ -15,15 +15,15 @@ module.exports = class Rectangle {
   }
 
   rotate() {
-    [w, h] = [h, w];
-    for (let i = 0; i < h * 2; i++) {
-      console.log("X".repeat(w * 2));
+    [this.width, this.height] = [this.height, this.width];
+    for (let i = 0; i < this.height * 2; i++) {
+      console.log("X".repeat(this.width * 2));
     }
   }
 
   double() {
-    for (let i = 0; i < h * 2; i++) {
-      console.log("X".repeat(w * 2));
+    for (let i = 0; i < this.height * 2; i++) {
+      console.log("X".repeat(this.width * 2));
     }
   }
 };
