@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''
+"""
 SQL joins in Python + Mysql
-'''
+"""
 
 import sys
 import MySQLdb
