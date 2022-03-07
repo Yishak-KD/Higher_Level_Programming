@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 '''
 Takes an argument and searches from the table to list city names
 '''
