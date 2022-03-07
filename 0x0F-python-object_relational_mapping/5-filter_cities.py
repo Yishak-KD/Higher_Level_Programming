@@ -15,6 +15,6 @@ if __name__ == "__main__":
 
     mycursor = db.cursor()
 
-    mycursor.execute("SELECT cities.name FROM states INNER JOIN cities ON states.id = cities.state_id WHERE states.name LIKE '{}'".format(sys.argv[4]))
+    mycursor.execute("SELECT cities.name FROM states INNER JOIN cities ON states.id = cities.state_id WHERE states.name LIKE '{}'ORDER BY cities.id ASC".format(sys.argv[4]))
     for i in mycursor.fetchall():
-        print(", ".join(i))
+        print(i, end="")
