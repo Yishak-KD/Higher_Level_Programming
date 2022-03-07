@@ -15,6 +15,6 @@ if __name__ == '__main__':
 
     mycursor = db.cursor()
 
-    mycursor.execute("SELECT c.id, c.name, s.name FROM states s INNER JOIN cities c ON s.id = c.state_id ORDER BY c.id ASC")
+    mycursor.execute("SELECT c.id, c.name, s.name FROM cities as c INNER JOIN states as s ON c.state_id = s.id ORDER BY c.id ASC")
     for i in mycursor.fetchall:
         print(i)
