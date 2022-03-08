@@ -17,4 +17,7 @@ if __name__ == "__main__":
 
     u_names = session.query(State).first()
 
-    print(f"{u_names.id}: {u_names.name}")
+    if u_names == "":
+        print()
+    else:
+        print(f"{u_names.id}: {u_names.name}")
