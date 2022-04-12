@@ -10,7 +10,6 @@ import urllib.error
 req = urllib.request.Request(sys.argv[1])
 try:
     with urllib.request.urlopen(req) as resp:
-            print(resp.read().decode("ascii"))
+        print(resp.read().decode("ascii"))
 except urllib.error.HTTPError as e:
     print("Error code: {}".format(e.code))
-
