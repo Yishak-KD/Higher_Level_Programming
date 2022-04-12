@@ -1,5 +1,10 @@
 #!/usr/bin/python3
-"""Script that takes a URL, display the body of the response."""
+"""
+Script that takes a URL, display the body of the response.
+
+Usage: ./3-error_code.py <URL>
+  - Handles HTTP errors.
+"""
 
 import urllib.request
 import urllib.error
