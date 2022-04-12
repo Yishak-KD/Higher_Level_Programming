@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-# Python script that takes in a URL,
-# Sends a request to the URL,
-# Display the value of X-Request-Id
+# Python script that takes in a URL, and displays result
 
 import urllib.request
 import sys
