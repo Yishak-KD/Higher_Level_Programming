@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Script that takes a URL, display the body of the response
+Script that takes a URL, display the body of the response.
 """
 
 import urllib.request
