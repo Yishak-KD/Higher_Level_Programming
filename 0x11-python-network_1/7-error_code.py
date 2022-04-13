@@ -10,4 +10,4 @@ if __name__ == '__main__':
         req = requests.get(url)
         print(req.text)
     except requests.exceptions.HTTPError as e:
-        print("Error code: {}".format(e.status_code))
+        print("Error code: {}".format(e))
