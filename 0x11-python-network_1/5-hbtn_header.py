@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Script that takes URL and display header response"""
+"""
+script that takes URL and display header response.
+"""
 
 import requests
 import sys
