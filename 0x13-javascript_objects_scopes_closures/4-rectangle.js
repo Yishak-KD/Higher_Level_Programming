@@ -10,23 +10,13 @@ module.exports = class Rectangle {
   }
 
   print () {
-    let string = '';
-
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        string += 'X';
-      }
-      string += '\n';
+      console.log('X'.repeat(this.width));
     }
-    console.log(string);
   }
 
   rotate () {
-    const temp;
-
-    temp = this.height;
-    this.height = this.width;
-    this.width = temp;
+    [this.width, this.height] = [this.height, this.width];
   }
 
   double () {
