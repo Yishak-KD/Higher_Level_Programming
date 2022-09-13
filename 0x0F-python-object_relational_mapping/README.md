@@ -1,1 +1,1 @@
-Introduction to ORM
+Introduction to ORM (Object Relational Mapper)
