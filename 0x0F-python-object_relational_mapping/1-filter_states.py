@@ -1,10 +1,8 @@
 #!/usr/bin/python3
+"""Script that lists a given name starting with specific letter"""
 
 import sys
 import MySQLdb
-
-'''
-Script that lists a given name starting with specific letter'''
 
 if __name__ == "__main__":
 	db = MySQLdb.connect(
