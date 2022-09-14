@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-
+"""Script that takes an argument and check for matching"""
 import sys
 import MySQLdb
-
-'''
-Script that takes an argument and check for matching
-'''
 
 if __name__ == "__main__":
 	db = MySQLdb.connect(
