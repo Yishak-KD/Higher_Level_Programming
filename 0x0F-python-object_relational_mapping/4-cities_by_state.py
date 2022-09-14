@@ -1,11 +1,7 @@
 #!/usr/bin/python3
-
+"""Script that lists all cities froma given database"""
 import sys
 import MySQLdb
-
-'''
-Script that lists all cities from a given database.
-'''
 
 if __name__ == '__main__':
 	db = MySQLdb.connect(
