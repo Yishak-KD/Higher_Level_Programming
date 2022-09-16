@@ -12,7 +12,7 @@ if __name__ == "__main__":
 
     mycursor = db.cursor()
 
-    mycursor.execute("SELECT * FROM states WHERE name LIKE '{}' \n
+    mycursor.execute("SELECT * FROM states WHERE name LIKE '{}' \
                      ORDER BY id ASC".format(sys.argv[4]))
 
     for i in mycursor.fetchall():
