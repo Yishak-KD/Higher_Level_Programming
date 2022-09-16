@@ -8,11 +8,13 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-	engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
-	Session = sessionmaker(bind = engine)
-	session = Session()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-	result = session.query(State, City).filter(State.id == City.state_id).order_by(City.id)
-	for i, j in result:
-		print("{}: ({}) {}".format(i.name, j.id, j.name))
+    result = session.query(State, City).filter(
+        State.id == City.state_id).order_by(City.id)
+    for i, j in result:
+        print("{}: ({}) {}".format(i.name, j.id, j.name))
