@@ -6,8 +6,7 @@ import requests
 
 
 if __name__ == "__main__":
-    url = "https://api.github.com/repos/{}/{}/commits".format(
-        sys.argv[2], sys.argv[1])
+    url = "https://api.github.com/repos/{}/{}/commits".format(sys.argv[2], sys.argv[1])
 
     resp = requests.get(url)
     com = r.json()
