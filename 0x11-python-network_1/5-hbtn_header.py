@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Take an argument and display value
+"""Take an argument and display value"""
 import requests
 import sys
 
