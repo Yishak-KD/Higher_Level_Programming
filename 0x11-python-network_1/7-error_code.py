@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# A script that takes a URL, and display error code
+"""A script that takes a URL, and display error code"""
 import requests
 import sys
 
