@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# Python script that fetches information
+"""Python script that fetches information"""
 import requests
 
 if __name__ == "__main__":
