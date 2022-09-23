@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script that takes in a URL and email address and displays the body of the response"""
+"""Script that takes in a URL and displays the body of the response"""
 import requests
 import sys
 
