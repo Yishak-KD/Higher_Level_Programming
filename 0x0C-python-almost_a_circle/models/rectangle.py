@@ -76,7 +76,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return in a readable string format"""
-        return "[Rectangle]({}) {}/{} - {}/{}".format(self.id,
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                       self.__x,
                                                       self.__y,
                                                       self.__width,
