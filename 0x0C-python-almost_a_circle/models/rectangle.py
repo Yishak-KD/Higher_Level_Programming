@@ -69,10 +69,21 @@ class Rectangle(Base):
 
     def display(self):
         """Display #"""
-        for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+        if self.__y != 0:
+            for newline in range(self.__y):
+                print()
+
+        for row in range(self.__height):
+            print((self.__x * " ") + (self.__width * '#'))
+
+    def update(self, *args):
+        """Assign an argument and return value"""
+        for i in range(len(args)):
+            return "[Rectangle] ({}) {}/{} - {}/{}".format(args[0],
+                                                       args[1],
+                                                       args[2],
+                                                       args[3])
+
 
     def __str__(self):
         """Return in a readable string format"""
