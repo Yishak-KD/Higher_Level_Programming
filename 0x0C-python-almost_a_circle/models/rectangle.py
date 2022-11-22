@@ -78,11 +78,15 @@ class Rectangle(Base):
 
     def update(self, *args):
         """Assign an argument and return value"""
-        for i in range(len(args)):
-            return "[Rectangle] ({}) {}/{} - {}/{}".format(args[0],
-                                                           args[1],
-                                                           args[2],
-                                                           args[3])
+        if len(args) != 0:
+            try:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+            except IndexError:
+                pass
 
     def __str__(self):
         """Return in a readable string format"""
