@@ -80,10 +80,9 @@ class Rectangle(Base):
         """Assign an argument and return value"""
         for i in range(len(args)):
             return "[Rectangle] ({}) {}/{} - {}/{}".format(args[0],
-                                                       args[1],
-                                                       args[2],
-                                                       args[3])
-
+                                                           args[1],
+                                                           args[2],
+                                                           args[3])
 
     def __str__(self):
         """Return in a readable string format"""
