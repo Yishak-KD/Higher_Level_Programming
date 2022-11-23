@@ -25,7 +25,8 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-    """A function with args and kwargs"""
+        """A function with args and kwargs
+        """
         if len(args) != 0:
             try:
                 self.id = args[0]
