@@ -76,7 +76,7 @@ class Rectangle(Base):
         for row in range(self.__height):
             print((self.__x * " ") + (self.__width * '#'))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Assign an argument and return value"""
         if len(args) != 0:
             try:
@@ -87,6 +87,10 @@ class Rectangle(Base):
                 self.__y = args[4]
             except IndexError:
                 pass
+
+        elif len(args) == 0:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
 
     def __str__(self):
         """Return in a readable string format"""
