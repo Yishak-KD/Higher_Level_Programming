@@ -40,7 +40,7 @@ class Base:
     def from_json_string(json_string):
         """Return list of json string representation
         """
-        if json_string is None or json_string == "[]":
+        if json_string is None:
             return "[]"
         else:
             return json.loads(json_string)
